@@ -20,12 +20,12 @@ public class SimplePendulum extends AbstractPendulum {
 
     /**
      * provides this Pendulum's angular frequency
-     */ 
+     */
     public double getAngularFrequency () { return angularFrequency; }
 
     /**
      * provides this Pendulum's period of motion
-     */ 
+     */
     public double getPeriodOfMotion () { return periodOfMotion; }
 
     /**

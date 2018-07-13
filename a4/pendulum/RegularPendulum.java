@@ -7,20 +7,20 @@ public class RegularPendulum extends AbstractPendulum {
     private double lastTheta, lastVel, lastAccel;
 
     /**
-     * Creates a new Pendulum instance 
+     * Creates a new Pendulum instance
      */
     public RegularPendulum (double inLength, double inMass, double inTheta0, double inDelta, double inDiss, double inG) {
         super (inLength, inMass, inTheta0, inG);
-    	delta=inDelta;
-    	dissipation = inDiss;
-    	lastVel = 0;
-    	lastTheta = this.getMaxAngularDisplacement ();
-    	lastAccel = -(this.getGravitationalField () / this.getStringLength ())*Math.sin (lastTheta);
+        delta=inDelta;
+        dissipation = inDiss;
+        lastVel = 0;
+        lastTheta = this.getMaxAngularDisplacement ();
+        lastAccel = -(this.getGravitationalField () / this.getStringLength ())*Math.sin (lastTheta);
     }
 
-    // public RegularPendulum (double inLength, double inMass, double inTheta0, double inDelta) {
-	   // this (inLength, inMass, inTheta0, inDelta, 0.0);
-    // }
+    public RegularPendulum (double inLength, double inMass, double inTheta0, double inDelta, double inG) {
+	   this (inLength, inMass, inTheta0, inDelta, 0.0, inG);
+    }
 
     public void step () {
     	iterations++;
@@ -34,6 +34,6 @@ public class RegularPendulum extends AbstractPendulum {
     public double getLastAcceleration () { return lastAccel; }
     public double getLastTime () { return iterations*delta; }
     public double getDissipationConstant () { return dissipation; }
-    
+
 
 }
