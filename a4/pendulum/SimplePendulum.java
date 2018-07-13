@@ -32,6 +32,6 @@ public class SimplePendulum extends AbstractPendulum {
      * provides the angular displacement of this Pendulum at time t
      */
     public double getTheta (double t) {
-	return this.getMaxAngularDisplacement () * Math.cos (angularFrequency * t);
+	       return this.getMaxAngularDisplacement () * Math.cos (angularFrequency * t);
     }
 }
