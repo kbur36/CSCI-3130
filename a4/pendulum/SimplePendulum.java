@@ -13,19 +13,19 @@ public class SimplePendulum extends AbstractPendulum {
      * inG: gravitational field value to use
      */
     public SimplePendulum (double inLength, double inMass, double inTheta0, double inG) {
-	super (inLength, inMass, inTheta0, inG);
-	angularFrequency = Math.sqrt (this.getGravitationalField () / this.getStringLength ());
-	periodOfMotion = 2 * Math.PI * Math.sqrt (this.getStringLength () / this.getGravitationalField ());
+    	super (inLength, inMass, inTheta0, inG);
+    	angularFrequency = Math.sqrt (this.getGravitationalField () / this.getStringLength ());
+    	periodOfMotion = 2 * Math.PI * Math.sqrt (this.getStringLength () / this.getGravitationalField ());
     }
 
     /**
      * provides this Pendulum's angular frequency
-     */ 
+     */
     public double getAngularFrequency () { return angularFrequency; }
 
     /**
      * provides this Pendulum's period of motion
-     */ 
+     */
     public double getPeriodOfMotion () { return periodOfMotion; }
 
     /**
